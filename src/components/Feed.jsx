@@ -3,10 +3,14 @@ import { Bolt, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import SideBar from "./SideBar";
 import Videos from "./Videos";
-import { fetchFromApi } from "../utilities/fetchFromAPI";
+import { fetchFromAPI, fetchFromApi } from "../utilities/fetchFromAPI";
 
 const Feed = () => {
-  useEffect(() => {}, []);
+  const [selectedCategory, setSelectedCategory] = useState("New");
+
+  useEffect(() => {
+    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`);
+  }, [selectedCategory]); //this means it's gonna recall this function whenever we change a category
 
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
@@ -17,7 +21,10 @@ const Feed = () => {
           px: { sx: 0, md: 2 },
         }}
       >
-        <SideBar></SideBar>
+        <SideBar
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+        ></SideBar>
         <Typography
           className="copyright"
           variant="body2"
@@ -35,7 +42,7 @@ const Feed = () => {
             color: "white",
           }}
         >
-          New <span style={{ color: "#F31503" }}>videos</span>
+          {selectedCategory} <span style={{ color: "#F31503" }}>videos</span>
         </Typography>
         <Videos></Videos>
       </Box>

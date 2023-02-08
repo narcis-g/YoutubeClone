@@ -1,7 +1,7 @@
 import axios from "axios";
 
 //500 entries a day
-const base_URL = "https://youtube-v31.p.rapidapi.com/captions";
+const base_URL = "https://youtube-v31.p.rapidapi.com";
 
 const options = {
   url: base_URL,
@@ -12,7 +12,7 @@ const options = {
   },
 };
 
-export const fetchFromApi = async (url) => {
+export const fetchFromAPI = async (url) => {
   const { data } = await axios.get(`${base_URL}/${url}`, options);
   return data;
 };
