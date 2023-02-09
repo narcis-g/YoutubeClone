@@ -7,9 +7,11 @@ import { fetchFromAPI, fetchFromApi } from "../utilities/fetchFromAPI";
 
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState("New");
+  const [videos, setVideos] =useState([])
 
   useEffect(() => {
-    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`);
+    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
+        .then((data) => setVideos(data.items))
   }, [selectedCategory]); //this means it's gonna recall this function whenever we change a category
 
   return (
@@ -44,7 +46,7 @@ const Feed = () => {
         >
           {selectedCategory} <span style={{ color: "#F31503" }}>videos</span>
         </Typography>
-        <Videos></Videos>
+        <Videos videos={videos}></Videos>
       </Box>
     </Stack>
   );
