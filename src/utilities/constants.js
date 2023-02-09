@@ -17,6 +17,7 @@ export const logo = 'https://i.ibb.co/s9Qys2j/logo.png';
 export const categories = [
   { name: 'New', icon: <HomeIcon />, },
   { name: 'PewDiePie', icon: <CodeIcon />, },
+  { name:'bahoi oficial', icon: <CodeIcon/>},
   { name: 'Coding', icon: <CodeIcon />, },
   { name: 'ReactJS', icon: <CodeIcon />, },
   { name: 'Music', icon: <MusicNoteIcon /> },
@@ -34,7 +35,7 @@ export const categories = [
 
 export const demoThumbnailUrl = 'https://i.ibb.co/G2L2Gwp/API-Course.png';
 export const demoChannelUrl = '/channel/UCmXmlB4-HJytD7wek0Uo97A';
-export const demoVideoUrl ='https://www.youtube.com/@PewDiePie/videos'///video/GDa8kZLNhJ4';
+export const demoVideoUrl ='https://www.youtube.com/@PewDiePie/videos';
 export const demoChannelTitle = 'PewDiePie';
 export const demoVideoTitle = 'We made history';
 export const demoProfilePicture = 'http://dergipark.org.tr/assets/app/images/buddy_sample.png'
