@@ -32,7 +32,7 @@ const Feed = () => {
           variant="body2"
           sx={{ marginTop: 1.5, color: "#fff" }}
         >
-          Copyright 2023
+          Copyright 2023 by NGA
         </Typography>
       </Box>
       <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
