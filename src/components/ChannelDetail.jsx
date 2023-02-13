@@ -28,7 +28,7 @@ const ChannelDetail = () => {
   }, [id]);
 
   return (
-    <Box minHeight="95vh">
+    <Box minHeight="90vh">
       <Box>
         <div
           style={{
