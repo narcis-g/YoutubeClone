@@ -33,8 +33,7 @@ const ChannelDetail = () => {
         <div
           style={{
             height: "300px",
-            background:
-              "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,68,201,1) 0%, rgba(0,212,255,1) 100%);",
+            background: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(11,4,235,1) 0%, rgba(0,212,255,1) 100%)",
             zIndex: 10,
           }}
         />
